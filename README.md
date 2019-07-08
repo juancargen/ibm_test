@@ -1,4 +1,4 @@
-# stratangbackend - Stratalogica Next Generation 2018
+# Acme Bank Web APP - IBM Test - Juan Carlos Giraldo - Julio 7 2019 
 
 Repositorio del código fuente test IBM Acme Bank - Java Developer Full Stack Medellin
 

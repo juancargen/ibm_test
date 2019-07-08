@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <property name="now" value="now()" dbms="h2"/>
+    <property name="now" value="current_timestamp" dbms="postgresql"/>
+
+    <!--
+        Strata ng domain tables.
+        The initial schema has the '00000000000001' id, so that it is over-written if we re-generate it.
+    -->
+    <changeSet id="00000000000004" author="jgiraldo">
+
+        <delete
+            tableName="DGEO_MAP_TYPE">
+        </delete>
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/stratang-domains/dgeo_map_type.csv"
+                  separator=";"
+                  tableName="DGEO_MAP_TYPE"/>
+
+        <delete
+            tableName="DGEO_MAP_SERVICE_TYPE">
+        </delete>
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/stratang-domains/dgeo_map_service_type.csv"
+                  separator=";"
+                  tableName="DGEO_MAP_SERVICE_TYPE"/>
+
+        <delete
+            tableName="DEDU_MAP_CATEGORY">
+        </delete>
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/stratang-domains/dedu_map_category.csv"
+                  separator=";"
+                  tableName="DEDU_MAP_CATEGORY"/>
+
+    </changeSet>
+</databaseChangeLog>

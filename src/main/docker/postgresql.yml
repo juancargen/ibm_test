@@ -1,0 +1,11 @@
+version: '2'
+services:
+    stratangbackendgateway-postgresql:
+        image: postgres:10.4
+        # volumes:
+        #     - ~/volumes/jhipster/stratangbackendgateway/postgresql/:/var/lib/postgresql/data/
+        environment:
+            - POSTGRES_USER=stratangbackendgateway
+            - POSTGRES_PASSWORD=
+        ports:
+            - 5432:5432

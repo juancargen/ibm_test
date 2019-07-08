@@ -1,0 +1,4 @@
+id;ds_name;ds_description
+1;Tile service;Tile service Type
+2;WMS;Web Map Service Type
+3;GeoJSON;GeoJSON Type
